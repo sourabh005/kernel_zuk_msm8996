@@ -13,7 +13,6 @@ zip_name="$kernel_name-$device_name-$kernel_version-$(date +"%Y%m%d")-$(date +"%
 export USE_CCACHE=1
 export CCACHE_DIR=/home/thakursourabh272
 
-export HOME="/home/subhrajyoti"
 export CONFIG_FILE="destructor_z2_plus_defconfig"
 export ARCH="arm64"
 export KBUILD_BUILD_USER="Sourabh"
