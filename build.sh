@@ -4,7 +4,7 @@
 #For Time Calculation
 BUILD_START=$(date +"%s")
 
-kernel_version="Stable"
+kernel_version="Nougat"
 kernel_name="Destructor"
 device_name="Z2_Plus"
 zip_name="$kernel_name-$device_name-$kernel_version-$(date +"%Y%m%d")-$(date +"%H%M%S").zip"
