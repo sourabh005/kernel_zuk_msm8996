@@ -4,26 +4,25 @@
 #For Time Calculation
 BUILD_START=$(date +"%s")
 
-kernel_version="Stable"
-kernel_name="Heliox"
+kernel_version="Oreo"
+kernel_name="Destructor"
 device_name="Z2_Plus"
 zip_name="$kernel_name-$device_name-$kernel_version-$(date +"%Y%m%d")-$(date +"%H%M%S").zip"
 
 # ccache
 export USE_CCACHE=1
-export CCACHE_DIR=/home/ccache/subhrajyoti
+export CCACHE_DIR=/home/thakursourabh272
 
-export HOME="/home/subhrajyoti"
-export CONFIG_FILE="heliox_z2_plus_defconfig"
+export CONFIG_FILE="destructor_z2_plus_defconfig"
 export ARCH="arm64"
-export KBUILD_BUILD_USER="Subhrajyoti"
-export KBUILD_BUILD_HOST="Beast"
-export TOOLCHAIN_PATH="${HOME}/kernel/toolchain"
-export CROSS_COMPILE=$TOOLCHAIN_PATH/bin/aarch64-linux-gnu-
+export KBUILD_BUILD_USER="Sourabh"
+export KBUILD_BUILD_HOST="Destructor"
+export TOOLCHAIN_PATH="/build/Custom_Toolchain"
+export CROSS_COMPILE=$TOOLCHAIN_PATH/bin/aarch64-Mi5-linux-gnu-
 export CONFIG_ABS_PATH="arch/${ARCH}/configs/${CONFIG_FILE}"
-export objdir="$HOME/kernel/obj"
-export sourcedir="$HOME/kernel/zuk"
-export anykernel="$HOME/kernel/anykernel"
+export objdir="/build/srb/destructor/obj"
+export sourcedir="/build/srb/destructor/zuk"
+export anykernel="/build/srb/destructor/anykernel"
 
 compile() {
   make O=$objdir  $CONFIG_FILE -j12
